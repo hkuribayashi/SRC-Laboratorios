@@ -1,0 +1,20 @@
+$TTL    604800
+@       IN      SOA     ns1.acme.edu.br. root.acme.edu.br. (
+                  3       ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+     IN      NS      ns1.acme.edu.br.
+     IN      MX      10  mail1.acme.edu.br.
+     IN      MX      20  mail2.acme.edu.br.
+     IN      TXT     "v=spf1 A MX PTR ip4:10.204.48.0/24"
+
+ns1          		IN      A	10.204.48.1
+aluno     	   	IN      A	10.204.48.2
+professor        	IN      A	10.204.48.3
+mail1	        	IN      A	10.204.48.4
+mail2	        	IN      A	10.204.48.5
+visitantes		IN	CNAME	wifi
+wifi			IN	A	10.204.48.6
